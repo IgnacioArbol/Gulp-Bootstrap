@@ -1,0 +1,128 @@
+$primary: rgb(231, 112, 231);
+$secondary: rgb(180, 11, 247);
+$color-nav:rgb(0, 0, 0);
+$body-color:rgb(190, 245, 255);
+$bg-nav: rgb(255, 255, 255);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Mate&display=swap');
+
+//utilizamos las fuentes que hemos seleccionado
+$font-family-sans-serif: 'Mate', serif;
+$font-cabeceras:'Black Ops One', cursive;
+$headings-font-family:$font-cabeceras;
+
+
+$navbar-dark-background:            $bg-nav;
+$navbar-dark-color:                 rgba($color-nav, .55);
+$navbar-dark-hover-color:           rgba($secondary, .75);
+$navbar-dark-active-color:           $color-nav;
+$navbar-dark-disabled-color:        rgba($color-nav, .25);
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color:  rgba($color-nav, .1);
+
+//EDITAR NAVBAR
+.navbar{
+    background-color: $navbar-dark-background;
+}
+#logo{
+    width: 100px;
+    
+}
+
+
+.nav-link{
+    color: $navbar-dark-color;
+    border-radius: 25px;
+    
+    &:hover{
+        //cambiar el bg del hover
+        background-color: $primary;
+        
+    }
+    &:focus{
+        //cambiar el bg cuando das click
+        background-color: $secondary;
+    }
+    &:disabled{
+        color: $navbar-dark-disabled-color;
+    }
+}
+//Editar jumbotron
+
+.jumbotron{
+    color: $bg-nav;
+    background-color: $primary
+}
+
+$form-label-color-border:              lighten($primary,60%);
+$form-label-margin-top:                .5rem ;
+$form-label-border-width:               0.5rem;
+
+label {
+    margin-top: $form-label-margin-top;
+}
+
+
+$border-color:                $secondary;
+$border-width:                  .3rem;
+$card-bg:                       $primary;
+
+$border-radius:               25px;
+$border-radius-sm:            .3rem;
+$border-radius-lg:             .5rem;
+
+$card-cap-bg:                       rgba(rgb(0, 0, 0),5 ) ;
+$card-spacer-x:                     1rem;
+
+           
+.card{
+    border: 0.2rem solid rgba($primary, 0.2);
+    font-size: 1.2rem;
+    &-img-top{
+        color: rgba($color: #00ff0dfb, $alpha: 2.0);
+    
+    }
+
+    button:focus{
+        background-color: rgba($primary, 0.8);
+    }
+}
+// editamos los modales
+$modal-content-color:              $body-color;
+$modal-content-bg:                  $color-nav;
+$modal-content-border-width:        .3rem;
+$modal-content-border-radius:        .3rem;
+
+.modal-footer{
+    button{
+        background-color: $primary;
+        border: none;
+        &:hover{
+            background-color: rgba($primary, 0.5);
+        }
+    }
+}
+
+form{
+    background-color: $primary;
+}
+
+//Cambiar color del hr
+$hr-color: $color-nav;
+
+//Cambiar color label formulario
+$form-label-color:  $color-nav;
+
+
+//Editar Input
+$input-border-color: $secondary;
+$input-border-width: 0.2rem;
+$input-color: $color-nav;
+$input-background-color: $color-nav;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+    background-color: $body-color;
+}
